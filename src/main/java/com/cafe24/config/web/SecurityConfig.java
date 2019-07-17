@@ -2,6 +2,7 @@ package com.cafe24.config.web;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -65,4 +66,15 @@ public class SecurityConfig extends WebMvcConfigurerAdapter {
 		.excludePathPatterns("/user/logout")
 		.excludePathPatterns("/assets/**");
 	}
+	
+//	@Autowired
+//	CsrfInterceptor csrfInterceptor;
+//
+//	@Override
+//	public void addInterceptors(InterceptorRegistry registry)
+//	{
+//		registry.addInterceptor(csrfInterceptor);
+//	}
+	
+	
 }

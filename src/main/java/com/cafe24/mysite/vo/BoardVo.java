@@ -50,7 +50,7 @@ public class BoardVo {
 	}
 
 	public BoardVo(Long no, String title, String contents) {
-		this.user_no = no;
+		this.no = no;
 		this.title = title;
 		this.contents = contents;
 	}

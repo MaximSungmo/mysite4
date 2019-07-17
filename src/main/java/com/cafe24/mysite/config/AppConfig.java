@@ -4,12 +4,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import com.cafe24.config.app.DBConfig;
 import com.cafe24.config.app.MyBatisConfig;
 
 @Configuration
 @EnableAspectJAutoProxy
+@EnableWebSecurity
 @ComponentScan({"com.cafe24.mysite.service", "com.cafe24.mysite.repository", "com.cafe24.mysite.dao", "com.cafe24.mysite.aspect"})
 @Import({DBConfig.class, MyBatisConfig.class})
 public class AppConfig {

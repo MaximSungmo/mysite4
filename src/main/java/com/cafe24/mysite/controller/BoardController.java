@@ -90,7 +90,8 @@ public class BoardController {
 
 	@RequestMapping(value = "/modify", method = RequestMethod.GET)
 	public String modify(@RequestParam(value = "no") Long no, Model model) {
-		model.addAttribute("no", no);
+		BoardVo vo = boardService.viewContent(new BoardVo(no));
+		model.addAttribute("vo", vo);
 		return "/board/modify";
 	}
 
@@ -98,7 +99,7 @@ public class BoardController {
 	public String modifyPost(@RequestParam(value = "no") Long no, @RequestParam(value = "title") String title,
 			@RequestParam(value = "content") String content, Model model) {
 		boardService.updateContent(new BoardVo(no, title, content));
-		return "redirect:/board/modify";
+		return "redirect:/board/modify?no="+no;
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)

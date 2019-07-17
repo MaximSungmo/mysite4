@@ -38,6 +38,8 @@ public class BoardDao {
 
 	public boolean update(BoardVo vo) {
 		int count = sqlSession.update("board.updatecontent", vo);
+		
+		System.out.println(vo);
 		return 1 == count;
 	};
 

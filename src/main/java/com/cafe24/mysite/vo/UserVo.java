@@ -40,6 +40,13 @@ public class UserVo {
 		this.password=password;
 		this.gender=gender;
 	}
+	public UserVo(Long no, String email, String name, String password, String gender) {
+		this.no=no;
+		this.email=email;
+		this.name=name;		
+		this.password=password;
+		this.gender=gender;
+	}
 	
 	public Long getNo() {
 		return no;

@@ -1,9 +1,7 @@
 package com.cafe24.mysite.initializer;
 
 import javax.servlet.Filter;
-import javax.servlet.Servlet;
 
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -44,5 +42,6 @@ public class MysiteWebApplicationInitializer extends AbstractAnnotationConfigDis
 		return dispatcherServlet;
 		
 	}
+	
 
 }
